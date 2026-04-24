@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidhhesh Shirsath — Brand &amp; Growth</title>
+  <meta name="description" content="Sidhhesh Shirsath — 6 years at the intersection of Branding, Content &amp; Growth in India's gaming and creator economy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --violet: #8b5cf6; }
+    html { scroll-behavior: smooth; }
+    body { background: #09070f; color: #f5f0ff; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    ::selection { background: rgba(139,92,246,0.35); color: #f5f0ff; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #09070f; }
+    ::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.4); border-radius: 3px; }
+    a { color: inherit; }
+    @keyframes spin      { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0.2} }
+    @keyframes wordIn    { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes marqL     { from{transform:translateX(0)} to{transform:translateX(-33.33%)} }
+    @keyframes marqR     { from{transform:translateX(-33.33%)} to{transform:translateX(0)} }
+    @keyframes fadeUp    { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes wordFloat { 0%,100%{transform:translate(-50%,-50%) translateY(0)} 50%{transform:translate(-50%,-50%) translateY(-6px)} }
+    @media (min-width: 768px) {
+      .hero-grid { grid-template-columns: 1.1fr 1fr !important; }
+      .hero-text { order: 1; } .hero-photo { order: 2; }
+    }
+    @media (max-width: 767px) { .hero-text { order: 2; } .hero-photo { order: 1; } }
+    .nav-desktop { display: flex; }
+    .nav-mobile  { display: none !important; }
+    @media (max-width: 767px) {
+      .nav-desktop { display: none !important; }
+      .nav-mobile  { display: block !important; }
+    }
+    main > div { animation: fadeUp 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+    body::after {
+      content:''; position:fixed; inset:0; pointer-events:none; z-index:200;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+      opacity:0.04;
+    }
+    /* Twitter embed dark override */
+    .twitter-timeline { color-scheme: dark; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+// ── SIDHHESH PORTFOLIO — CONTENT DATA ──────────────────────────────────────
+window.T = {
+  bg:      '#09070f',
+  surface: '#130f22',
+  card:    '#1a1230',
+  violet:  '#8b5cf6',
+  purple:  '#a855f7',
+  lilac:   '#c084fc',
+  yellow:  '#facc15',
+  text:    '#f5f0ff',
+  muted:   'rgba(245,240,255,0.55)',
+  border:  'rgba(139,92,246,0.2)',
+};
+
+window.ROTATING_WORDS = ['Marketing', 'Storytelling', 'Branding', 'Growth', 'Creativity'];
+
+// ── UPDATE THESE VIDEO IDs whenever you pick a new weekly rec ──────────────
+window.VIDEO_PICKS = [
+  {
+    id:      'dQw4w9WgXcQ',          // ← replace with YouTube video ID
+    title:   'How the creator economy actually works in 2026',
+    channel: '@colinandsamir',
+    note:    'Great take on platform shifts',
+  },
+  {
+    id:      'LXb3EKWsInQ',          // ← replace with YouTube video ID
+    title:   'Building brand communities from zero',
+    channel: '@garyvee',
+    note:    'Still the blueprint',
+  },
+  {
+    id:      'ZXsQAXx_ao0',          // ← replace with YouTube video ID
+    title:   'The dark side of gaming influencer marketing',
+    channel: '@penguinz0',
+    note:    'Important watch for anyone in this space',
+  },
+];
+
+window.EXPERIENCES = [
+  {
+    company:  'STAN',
+    domain:   'stan.gg',
+    role:     'Branding & Marketing Manager',
+    period:   'Mar 2022 — Present',
+    location: 'Bengaluru',
+    color:    '#8b5cf6',
+    summary:  "Defined STAN's brand vision, mission, and positioning — solidifying STAN as India's community-first gaming and creator platform.",
+    wins: [
+      'Spearheaded STANFest 2024: 30K footfall, 400M+ impressions, 200+ creators',
+      'Scaled Instagram 0→100K, monthly reach 7M+ organically, Twitter 0→26.8K',
+      'Led GTM for STAN Photon (Web3): 3,000+ onchain wallets, 2K Twitter growth',
+      'Directed 200+ creator partnerships & brand campaigns',
+      'Launched Minecraft + Anime categories: 300+ creators onboarded',
+      'Earned coverage from Google\'s AI Fund and a public mention from Sundar Pichai',
+      'Led a 7-member content and design team',
+    ],
+    tags: ['Brand strategy', 'Creator economy', 'Web3 GTM', 'Community'],
+  },
+  {
+    company:  'Sportskeeda',
+    domain:   'sportskeeda.com',
+    role:     'Content Producer',
+    period:   'May 2022 — Jun 2025',
+    location: 'Bengaluru',
+    color:    '#a855f7',
+    summary:  "Repositioned Sportskeeda from a general gaming page into India's esports-first media platform.",
+    wins: [
+      'Scaled Instagram 147K→324K (+115%) and monthly reach 1M→12M (+900%) in 14 months, purely organic',
+      'Scaled YouTube revenue 30× and drove 120K+ new subscribers through data-driven evergreen content',
+      'Built GameOnAir — original interview-led IP, 10M+ views across 10 episodes',
+      'Launched Pick Your Best — interactive voting format, 10K+ follower growth in 5 days',
+      'Led publisher partnerships: Krafton, Riot, Red Bull, Garena, Nodwin, Upthrust',
+      'Forged brand partnerships: Intel, Alienware, LOCO, Game of Future Russia',
+      'Managed a 10-member team',
+    ],
+    tags: ['Content strategy', 'Esports', 'YouTube growth', 'Publisher partnerships'],
+  },
+  {
+    company:  'India Today Gaming',
+    domain:   'indiatoday.in',
+    role:     'Social Media Executive',
+    period:   'Nov 2021 — Jan 2022',
+    location: 'Remote',
+    color:    '#c084fc',
+    summary:  'Developed and executed the social media strategy for the Tri-Nation FreeFire tournament WEC.',
+    wins: [
+      'Led social strategy for the Tri-Nation FreeFire tournament WEC',
+      'Delivered 1M+ impressions during the campaign',
+      'Drove 20K+ new followers in a short-cycle esports event',
+    ],
+    tags: ['Esports tournaments', 'FreeFire', 'Social strategy'],
+  },
+  {
+    company:  'Gaming Up',
+    domain:   '',
+    role:     'Founder',
+    period:   '2019 — Present',
+    location: 'Independent',
+    color:    '#facc15',
+    summary:  "Founded one of India's first esports community pages. Built foundational gaming industry relationships.",
+    wins: [
+      '0 → 30,000 followers in 6 months, purely organic',
+      'Built foundational relationships across India\'s gaming industry',
+      'Successfully sold the property',
+    ],
+    tags: ['Community', 'Founder', 'Early esports'],
+  },
+];
+
+window.PARTNERSHIPS = [
+  { name: 'Zingbus',         domain: 'zingbus.com',             color: '#FF6B35' },
+  { name: 'Scapia',          domain: 'scapia.in',               color: '#7C3AED' },
+  { name: 'Zupee',           domain: 'zupee.com',               color: '#F59E0B' },
+  { name: 'OpenAI',          domain: 'openai.com',              color: '#10B981' },
+  { name: 'Harley Davidson', domain: 'harley-davidson.com',     color: '#EF4444' },
+  { name: 'Acer India',      domain: 'acer.com',                color: '#3B82F6' },
+  { name: 'Flipkart',        domain: 'flipkart.com',            color: '#F97316' },
+  { name: 'BattleBucks',     domain: 'battlebucks.in',          color: '#FACC15' },
+  { name: 'Loco',            domain: 'loco.gg',                 color: '#8B5CF6' },
+  { name: 'Rooter',          domain: 'rooter.gg',               color: '#EC4899' },
+  { name: 'College Rivals',  domain: 'collegerivalsgaming.com', color: '#06B6D4' },
+  { name: 'Nodwin Gaming',   domain: 'nodwin.com',              color: '#F59E0B' },
+  { name: 'SuperGaming',     domain: 'supergaming.co',          color: '#8B5CF6' },
+  { name: 'Upthrust Gaming', domain: 'upthrust.gg',             color: '#10B981' },
+  { name: 'Spinbot',         domain: 'spinbot.io',              color: '#6366F1' },
+];
+
+// ── MEDIA GALLERY ────────────────────────────────────────────────────────────
+// HOW TO ADD YOUR PHOTOS & VIDEOS:
+//   1. Drag JPG/PNG/WebP/MP4 files into the project file panel (left sidebar)
+//   2. Put them in a "media/" folder  (e.g. media/stanfest-1.jpg)
+//   3. Update the src values below — they'll appear in the homepage gallery
+//   4. Set type: 'image' or type: 'video'
+//   5. For YouTube clips, use type: 'youtube' and src: 'YOUTUBE_VIDEO_ID'
+window.MEDIA_GALLERY = [
+  { src: 'media/stanfest-1.webp', caption: 'STANFest · With Jonathan',   tag: 'STAN',    type: 'image' },
+  { src: 'media/stanfest-2.webp', caption: 'STANFest · Creator Stage',   tag: 'STAN',    type: 'image' },
+  { src: 'media/stanfest-3.webp', caption: 'STANFest · Creator Meet',    tag: 'STAN',    type: 'image' },
+  { src: 'media/stanfest-4.webp', caption: 'STANFest · On Stage',        tag: 'STAN',    type: 'image' },
+  // Add more: { src: 'media/your-file.webp', caption: 'Caption', tag: 'Tag', type: 'image' }
+];
+
+// Work experience company logos (shown in experience section header)
+window.EXP_LOGOS = {
+  'STAN':               { domain: 'stan.gg',          color: '#8B5CF6' },
+  'Sportskeeda':        { domain: 'sportskeeda.com',  color: '#EF4444' },
+  'India Today Gaming': { domain: 'indiatoday.in',    color: '#E11D48' },
+  'Gaming Up':          { domain: '',                 color: '#FACC15' },
+};
+
+// Fallback blog posts shown if Medium RSS fails
+window.FALLBACK_POSTS = [
+  {
+    title:       'Data-informed creativity: the unfair advantage',
+    link:        'https://medium.com/@sidhhesh',
+    description: 'Creative instinct without data is guesswork. Data without creative instinct is just dashboards. Here\'s how I think about combining both.',
+    pubDate:     'Apr 18, 2026',
+    readMin:     5,
+    tag:         'Essay',
+    thumbnail:   'https://picsum.photos/seed/data1/800/450',
+  },
+  {
+    title:       'Why organic still beats paid in gaming',
+    link:        'https://medium.com/@sidhhesh',
+    description: 'We grew Sportskeeda monthly reach 1M to 12M in 14 months with zero paid. The playbook is simpler — and harder — than you think.',
+    pubDate:     'Mar 30, 2026',
+    readMin:     6,
+    tag:         'Playbook',
+    thumbnail:   'https://picsum.photos/seed/organic2/800/450',
+  },
+  {
+    title:       'What STANFest taught me about brand',
+    link:        'https://medium.com/@sidhhesh',
+    description: '30K footfall, 400M impressions, 200+ creators. But the real lesson was about something I didn\'t expect.',
+    pubDate:     'Mar 14, 2026',
+    readMin:     4,
+    tag:         'Personal',
+    thumbnail:   'https://picsum.photos/seed/stanfest3/800/450',
+  },
+];
+
+  </script>
+  <script type="text/babel">
+// ── SHARED COMPONENTS ────────────────────────────────────────────────────────
+const { useState, useEffect, useRef } = React;
+
+function Nav({ page, setPage }) {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const links = ['home','experience','blog','work','contact'];
+  const labels = { home:'Home', experience:'Experience', blog:'Blog', work:'Work', contact:'Contact' };
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const go = (p) => { setPage(p); setOpen(false); window.scrollTo(0,0); };
+
+  return (
+    <nav style={{
+      position:'fixed', top:0, left:0, right:0, zIndex:100,
+      padding:'0 clamp(16px,4vw,48px)',
+      height:64,
+      display:'flex', alignItems:'center', justifyContent:'space-between',
+      background: scrolled ? 'rgba(9,7,15,0.92)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(20px)' : 'none',
+      borderBottom: scrolled ? `1px solid ${T.border}` : '1px solid transparent',
+      transition:'all 0.4s ease',
+    }}>
+      <div onClick={() => go('home')} style={{
+        fontFamily:'Syne,sans-serif', fontWeight:800, fontSize:'1.25rem',
+        cursor:'pointer', letterSpacing:'-0.02em', color:T.text,
+      }}>
+        sidhhesh<span style={{color:T.violet}}>.</span>
+      </div>
+
+      {/* Desktop links */}
+      <div style={{display:'flex', gap:32, alignItems:'center'}} className="nav-desktop">
+        {links.map(l => (
+          <span key={l} onClick={() => go(l)} style={{
+            fontFamily:'Syne,sans-serif', fontSize:'0.75rem', letterSpacing:'0.1em',
+            textTransform:'uppercase', cursor:'pointer',
+            color: page===l ? T.violet : T.text,
+            opacity: page===l ? 1 : 0.7,
+            transition:'all 0.25s',
+          }}>{labels[l]}</span>
+        ))}
+      </div>
+
+      <button onClick={() => go('contact')} className="nav-desktop" style={{
+        fontFamily:'Syne,sans-serif', fontSize:'0.7rem', letterSpacing:'0.12em',
+        textTransform:'uppercase', padding:'10px 22px', borderRadius:100,
+        border:`1px solid ${T.border}`, background:'rgba(139,92,246,0.1)',
+        color:T.text, cursor:'pointer', display:'flex', alignItems:'center', gap:8,
+        transition:'all 0.3s',
+      }}>
+        <span style={{width:6,height:6,borderRadius:'50%',background:'#10b981',
+          animation:'blink 2s ease-in-out infinite',display:'inline-block'}} />
+        Let's Talk
+      </button>
+
+      {/* Mobile hamburger */}
+      <button onClick={() => setOpen(!open)} className="nav-mobile" style={{
+        background:'none', border:'none', color:T.text, cursor:'pointer',
+        fontSize:'1.5rem', lineHeight:1, padding:4,
+      }}>
+        {open ? '✕' : '☰'}
+      </button>
+
+      {open && (
+        <div style={{
+          position:'absolute', top:64, left:0, right:0,
+          background:'rgba(9,7,15,0.97)', backdropFilter:'blur(20px)',
+          borderBottom:`1px solid ${T.border}`,
+          padding:'16px 24px 24px',
+          display:'flex', flexDirection:'column', gap:4,
+        }}>
+          {links.map(l => (
+            <div key={l} onClick={() => go(l)} style={{
+              fontFamily:'Syne,sans-serif', fontSize:'1rem', fontWeight:600,
+              textTransform:'uppercase', letterSpacing:'0.08em',
+              padding:'12px 0', cursor:'pointer', color: page===l ? T.violet : T.text,
+              borderBottom:`1px solid rgba(139,92,246,0.08)`,
+            }}>{labels[l]}</div>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+}
+
+function Footer({ setPage }) {
+  const socials = [
+    { label: 'LinkedIn',  url: 'https://www.linkedin.com/in/sidhhesh-shirsath' },
+    { label: 'X / Twitter', url: 'https://x.com/sidshots' },
+    { label: 'Instagram', url: 'https://www.instagram.com/sid_sh0ts/' },
+    { label: 'Medium',    url: 'https://medium.com/@sidhhesh' },
+  ];
+  return (
+    <footer style={{
+      padding:'48px clamp(16px,4vw,48px) 32px',
+      borderTop:`1px solid ${T.border}`,
+    }}>
+      <div style={{ display:'flex', flexWrap:'wrap', gap:40, justifyContent:'space-between', marginBottom:32 }}>
+        <div>
+          <div onClick={() => { setPage('home'); window.scrollTo(0,0); }} style={{
+            fontFamily:'Syne,sans-serif', fontWeight:800, fontSize:'1.3rem',
+            cursor:'pointer', letterSpacing:'-0.02em', marginBottom:8,
+          }}>
+            sidhhesh<span style={{color:T.violet}}>.</span>
+          </div>
+          <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.82rem',
+            color:T.muted, maxWidth:260, lineHeight:1.6 }}>
+            Brand, Content & Growth.<br />Six years in India's gaming & creator economy.
+          </p>
+        </div>
+        <div style={{ display:'flex', gap:12, flexWrap:'wrap', alignItems:'flex-start' }}>
+          {socials.map(s => (
+            <a key={s.label} href={s.url} target="_blank" rel="noreferrer" style={{
+              display:'inline-flex', alignItems:'center', gap:8,
+              padding:'10px 18px', borderRadius:100,
+              border:`1px solid ${T.border}`, background:'rgba(139,92,246,0.05)',
+              fontFamily:'Syne,sans-serif', fontWeight:700, fontSize:'0.72rem',
+              letterSpacing:'0.08em', textTransform:'uppercase',
+              color:T.muted, textDecoration:'none', transition:'all 0.25s',
+            }}
+            onMouseEnter={e=>{e.currentTarget.style.borderColor=T.violet;e.currentTarget.style.color=T.violet;e.currentTarget.style.background='rgba(139,92,246,0.1)'}}
+            onMouseLeave={e=>{e.currentTarget.style.borderColor=T.border;e.currentTarget.style.color=T.muted;e.currentTarget.style.background='rgba(139,92,246,0.05)'}}>
+              {s.label} ↗
+            </a>
+          ))}
+          <a href="mailto:sidshot07@gmail.com" style={{
+            display:'inline-flex', alignItems:'center', gap:8,
+            padding:'10px 18px', borderRadius:100,
+            border:`1px solid ${T.violet}`, background:'rgba(139,92,246,0.1)',
+            fontFamily:'Syne,sans-serif', fontWeight:700, fontSize:'0.72rem',
+            letterSpacing:'0.08em', textTransform:'uppercase',
+            color:T.violet, textDecoration:'none', transition:'all 0.25s',
+          }}>
+            Email →
+          </a>
+        </div>
+      </div>
+      <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:20,
+        display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:12 }}>
+        <div style={{ fontFamily:'Syne,sans-serif', fontSize:'0.68rem', color:T.muted, opacity:0.45 }}>
+          © 2026 Sidhhesh Shirsath
+        </div>
+        <div style={{ fontFamily:'Syne,sans-serif', fontSize:'0.68rem', color:T.muted, opacity:0.45 }}>
+          Blog synced from Medium · Built with no-cost stack
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function PageHeader({ eyebrow, title, sub }) {
+  return (
+    <section style={{
+      padding:'100px clamp(16px,4vw,48px) 56px',
+      borderBottom:`1px solid ${T.border}`,
+    }}>
+      <div style={{fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+        fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:16}}>
+        ◆ {eyebrow}
+      </div>
+      <h1 style={{
+        fontFamily:'Syne,sans-serif', fontWeight:800,
+        fontSize:'clamp(2.5rem,7vw,5rem)', lineHeight:1.05,
+        letterSpacing:'-0.03em', margin:'0 0 20px', color:T.text,
+      }}>{title}</h1>
+      {sub && <p style={{
+        maxWidth:560, lineHeight:1.7, color:T.muted,
+        fontSize:'clamp(0.95rem,2vw,1.1rem)',
+        fontFamily:'Plus Jakarta Sans,sans-serif',
+      }}>{sub}</p>}
+    </section>
+  );
+}
+
+function Tag({ children, color }) {
+  return (
+    <span style={{
+      display:'inline-block',
+      padding:'4px 12px', borderRadius:100,
+      fontSize:'0.68rem', letterSpacing:'0.08em', textTransform:'uppercase',
+      background: color ? `${color}18` : 'rgba(139,92,246,0.1)',
+      border:`1px solid ${color ? color+'40' : T.border}`,
+      color: color || T.lilac,
+      fontFamily:'Syne,sans-serif',
+    }}>{children}</span>
+  );
+}
+
+function GlowCard({ children, style={}, onClick, hover=true }) {
+  const [hov, setHov] = useState(false);
+  return (
+    <div
+      onClick={onClick}
+      onMouseEnter={() => hover && setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        background:T.card,
+        border:`1px solid ${hov ? 'rgba(139,92,246,0.45)' : T.border}`,
+        borderRadius:20,
+        transition:'all 0.4s cubic-bezier(0.22,1,0.36,1)',
+        transform: hov && hover ? 'translateY(-5px)' : 'none',
+        boxShadow: hov && hover ? '0 20px 60px rgba(139,92,246,0.18)' : '0 4px 20px rgba(0,0,0,0.3)',
+        cursor: onClick ? 'pointer' : 'default',
+        position:'relative', overflow:'hidden',
+        ...style,
+      }}
+    >
+      {hov && hover && (
+        <div style={{
+          position:'absolute', inset:0, pointerEvents:'none',
+          background:'radial-gradient(circle at 50% 0%,rgba(139,92,246,0.08),transparent 60%)',
+        }} />
+      )}
+      {children}
+    </div>
+  );
+}
+
+// Export all shared components
+Object.assign(window, { Nav, Footer, PageHeader, Tag, GlowCard });
+
+
+// ── HOME PAGE ────────────────────────────────────────────────────────────────
+const { useState: useStateH, useEffect: useEffectH, useRef: useRefH } = React;
+
+// ── HERO ─────────────────────────────────────────────────────────────────────
+function Hero({ setPage }) {
+  const words = ROTATING_WORDS;
+  const [wi, setWi] = useStateH(0);
+  useEffectH(() => {
+    const t = setInterval(() => setWi(v => (v+1) % words.length), 2200);
+    return () => clearInterval(t);
+  }, []);
+
+  return (
+    <section style={{
+      minHeight:'100vh', display:'flex', alignItems:'center',
+      padding:'80px clamp(16px,4vw,48px) 60px',
+      position:'relative', overflow:'hidden',
+    }}>
+      {/* Ambient blobs */}
+      <div style={{position:'absolute',top:'-10%',left:'-8%',width:600,height:600,
+        background:'radial-gradient(circle,rgba(139,92,246,0.22),transparent 65%)',
+        filter:'blur(80px)',pointerEvents:'none'}} />
+      <div style={{position:'absolute',bottom:'5%',right:'-5%',width:500,height:500,
+        background:'radial-gradient(circle,rgba(168,85,247,0.16),transparent 65%)',
+        filter:'blur(70px)',pointerEvents:'none'}} />
+
+      <div style={{
+        display:'grid', gridTemplateColumns:'1fr', gap:48,
+        width:'100%', maxWidth:1200, margin:'0 auto', position:'relative', zIndex:1,
+      }} className="hero-grid">
+        {/* Left: Text */}
+        <div className="hero-text">
+          <div style={{fontSize:'0.68rem',letterSpacing:'0.3em',color:T.violet,
+            fontFamily:'Syne,sans-serif',textTransform:'uppercase',marginBottom:20}}>
+            ◆ Portfolio · 2026
+          </div>
+          <h1 style={{
+            fontFamily:'Syne,sans-serif',fontWeight:800,
+            fontSize:'clamp(3.2rem,9vw,7rem)',lineHeight:1,
+            letterSpacing:'-0.04em',margin:'0 0 8px',color:T.text,
+          }}>
+            Hey, I'm
+          </h1>
+          <h1 style={{
+            fontFamily:'Syne,sans-serif',fontWeight:800,
+            fontSize:'clamp(3.2rem,9vw,7rem)',lineHeight:1,
+            letterSpacing:'-0.04em',margin:'0 0 32px',
+            background:'linear-gradient(135deg,#e9d5ff,#8b5cf6 70%)',
+            WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',
+          }}>
+            Sidhhesh
+          </h1>
+
+          {/* Rotating word */}
+          <div style={{
+            display:'inline-flex',alignItems:'center',gap:12,
+            padding:'10px 20px',borderRadius:100,
+            border:`1px solid ${T.border}`,
+            background:'rgba(139,92,246,0.07)',
+            marginBottom:28,
+          }}>
+            <span style={{width:8,height:8,borderRadius:'50%',background:T.violet,
+              display:'inline-block',flexShrink:0,animation:'blink 1.8s ease-in-out infinite'}} />
+            <span key={wi} style={{
+              fontFamily:'Syne,sans-serif',fontWeight:700,fontSize:'0.85rem',
+              letterSpacing:'0.1em',textTransform:'uppercase',color:T.lilac,
+              animation:'wordIn 0.4s ease forwards',
+            }}>{words[wi]}</span>
+          </div>
+
+          <p style={{
+            maxWidth:480,lineHeight:1.75,color:T.muted,
+            fontSize:'clamp(1rem,2vw,1.15rem)',marginBottom:40,
+            fontFamily:'Plus Jakarta Sans,sans-serif',
+          }}>
+            Six years at the intersection of Branding, Content & Growth in India's gaming and creator economy. Data-informed creativity as the one principle.
+          </p>
+
+          <div style={{display:'flex',flexWrap:'wrap',gap:12}}>
+            <a href="mailto:sidshot07@gmail.com" style={{
+              fontFamily:'Syne,sans-serif',fontWeight:700,fontSize:'0.8rem',
+              letterSpacing:'0.1em',textTransform:'uppercase',
+              padding:'14px 28px',borderRadius:100,
+              background:T.violet,color:'#09070f',textDecoration:'none',
+              transition:'all 0.3s',display:'inline-block',
+            }}
+            onMouseEnter={e=>e.target.style.background=T.lilac}
+            onMouseLeave={e=>e.target.style.background=T.violet}>
+              Let's Talk →
+            </a>
+            <button onClick={() => { setPage('experience'); window.scrollTo(0,0); }} style={{
+              fontFamily:'Syne,sans-serif',fontWeight:700,fontSize:'0.8rem',
+              letterSpacing:'0.1em',textTransform:'uppercase',
+              padding:'14px 28px',borderRadius:100,
+              border:`1px solid ${T.border}`,
+              background:'transparent',color:T.text,cursor:'pointer',
+              transition:'all 0.3s',
+            }}
+            onMouseEnter={e=>{e.currentTarget.style.borderColor=T.violet;e.currentTarget.style.background='rgba(139,92,246,0.1)'}}
+            onMouseLeave={e=>{e.currentTarget.style.borderColor=T.border;e.currentTarget.style.background='transparent'}}>
+              Explore Work
+            </button>
+          </div>
+        </div>
+
+        {/* Right: Profile photo orbit */}
+        <div className="hero-photo" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+          <OrbitPhoto />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function OrbitPhoto() {
+  // Words arc from 7PM (210°) to 11PM (330°) — below the photo, not blocking it
+  const arcStart = 210, arcEnd = 330;
+  return (
+    <div style={{position:'relative',width:'min(360px,80vw)',aspectRatio:'1/1'}}>
+      {/* Decorative ring */}
+      <div style={{
+        position:'absolute',inset:0,
+        border:'1px dashed rgba(139,92,246,0.18)',borderRadius:'50%',
+        pointerEvents:'none',
+      }} />
+      {/* Words along arc — no full spin, gentle float */}
+      {ROTATING_WORDS.map((w,i) => {
+        const angle = arcStart + (i/(ROTATING_WORDS.length-1))*(arcEnd-arcStart);
+        const rad = (angle - 90) * Math.PI / 180;
+        const r = 50; // % radius
+        const x = 50 + r * Math.cos(rad);
+        const y = 50 + r * Math.sin(rad);
+        return (
+          <div key={w} style={{
+            position:'absolute',
+            left:`${x}%`, top:`${y}%`,
+            transform:'translate(-50%,-50%)',
+            animation:`wordFloat 3s ease-in-out ${i*0.5}s infinite`,
+          }}>
+            <div style={{
+              fontFamily:'Syne,sans-serif',fontWeight:700,fontSize:'0.65rem',
+              letterSpacing:'0.1em',textTransform:'uppercase',
+              padding:'6px 14px',borderRadius:100,whiteSpace:'nowrap',
+              background:'rgba(9,7,15,0.92)',border:`1px solid rgba(139,92,246,0.4)`,
+              color:T.lilac,backdropFilter:'blur(10px)',
+            }}>{w}</div>
+          </div>
+        );
+      })}
+      {/* Photo */}
+      <div style={{
+        position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-52%)',
+        width:'66%',aspectRatio:'1/1',borderRadius:'50%',overflow:'hidden',
+        boxShadow:'0 0 80px rgba(139,92,246,0.5),0 0 30px rgba(139,92,246,0.3)',
+        border:`3px solid rgba(139,92,246,0.6)`,
+      }}>
+        <img src="pfp.png" alt="Sidhhesh Shirsath"
+          style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+      </div>
+    </div>
+  );
+}
+
+// ── MEDIUM LATEST BLOG ────────────────────────────────────────────────────────
+function LatestBlogCard({ setPage }) {
+  const [post, setPost] = useStateH(null);
+  const [loading, setLoading] = useStateH(true);
+
+  useEffectH(() => {
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sidhhesh')
+      .then(r => r.json())
+      .then(data => {
+        if (data.items && data.items.length > 0) {
+          const item = data.items[0];
+          // Strip HTML from description
+          const tmp = document.createElement('div');
+          tmp.innerHTML = item.description || '';
+          const text = tmp.textContent.slice(0, 160) + '…';
+          setPost({
+            title:     item.title,
+            link:      item.link,
+            summary:   text,
+            date:      new Date(item.pubDate).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}),
+            thumbnail: item.thumbnail || (item.content && item.content.match(/<img[^>]+src="([^"]+)"/)?.[1]),
+            tag:       (item.categories && item.categories[0]) || 'Article',
+          });
+        } else {
+          setPost(FALLBACK_POSTS[0]);
+        }
+      })
+      .catch(() => setPost(FALLBACK_POSTS[0]))
+      .finally(() => setLoading(false));
+  }, []);
+
+  return (
+    <GlowCard onClick={() => post && window.open(post.link || 'https://medium.com/@sidhhesh','_blank')} style={{flex:1,minHeight:320}}>
+      {post && post.thumbnail && (
+        <div style={{height:160,overflow:'hidden',borderRadius:'20px 20px 0 0'}}>
+          <img src={post.thumbnail} alt={post.title}
+            style={{width:'100%',height:'100%',objectFit:'cover',filter:'saturate(0.8) brightness(0.75)'}} />
+          <div style={{position:'absolute',top:0,left:0,right:0,height:160,
+            background:'linear-gradient(to bottom,transparent 40%,rgba(26,18,48,0.9))'}} />
+        </div>
+      )}
+      <div style={{padding:'20px 24px 24px'}}>
+        <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:14}}>
+          <Tag>◆ Latest · Medium</Tag>
+          {post && <span style={{fontFamily:'Syne,sans-serif',fontSize:'0.65rem',color:T.muted}}>{post.date}</span>}
+        </div>
+        {loading ? (
+          <div style={{fontFamily:'Syne,sans-serif',color:T.muted,fontSize:'0.9rem'}}>Loading latest post…</div>
+        ) : post ? (
+          <>
+            <h3 style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:'1.15rem',
+              lineHeight:1.3,marginBottom:12,color:T.text}}>{post.title}</h3>
+            <p style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.85rem',
+              lineHeight:1.65,color:T.muted,marginBottom:16}}>{post.summary}</p>
+            <div style={{display:'flex',alignItems:'center',gap:6,
+              fontSize:'0.75rem',fontFamily:'Syne,sans-serif',color:T.violet,fontWeight:700}}>
+              Read on Medium →
+            </div>
+          </>
+        ) : (
+          <div style={{fontFamily:'Syne,sans-serif',color:T.muted}}>Visit medium.com/@sidhhesh</div>
+        )}
+      </div>
+    </GlowCard>
+  );
+}
+
+// ── VIDEO PICKS ───────────────────────────────────────────────────────────────
+function VideoPicksSection() {
+  const [active, setActive] = useStateH(0);
+
+  return (
+    <section style={{padding:'80px clamp(16px,4vw,48px)'}}>
+      <div style={{display:'flex',alignItems:'flex-end',justifyContent:'space-between',
+        flexWrap:'wrap',gap:16,marginBottom:40}}>
+        <div>
+          <div style={{fontSize:'0.68rem',letterSpacing:'0.25em',color:T.violet,
+            fontFamily:'Syne,sans-serif',textTransform:'uppercase',marginBottom:12}}>
+            ◆ Recommended This Week
+          </div>
+          <h2 style={{fontFamily:'Syne,sans-serif',fontWeight:800,
+            fontSize:'clamp(1.8rem,4vw,2.8rem)',letterSpacing:'-0.03em',margin:0}}>
+            Watch with me
+          </h2>
+        </div>
+        <p style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.85rem',
+          color:T.muted,maxWidth:320,lineHeight:1.6,margin:0}}>
+          Three picks I'm watching this week — on brand, gaming & the creator economy.
+        </p>
+      </div>
+
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:20}}>
+        {VIDEO_PICKS.map((v,i) => (
+          <VideoCard key={v.id} video={v} index={i} active={active===i} setActive={setActive} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function parseYTId(raw) {
+  if (!raw) return null;
+  if (raw.startsWith('CHANNEL:')) return null;
+  const short = raw.match(/youtu\.be\/([\w-]+)/);
+  if (short) return short[1];
+  const watch = raw.match(/[?&]v=([\w-]+)/);
+  if (watch) return watch[1];
+  if (/^[\w-]{10,12}$/.test(raw.trim())) return raw.trim();
+  return null;
+}
+
+function VideoCard({ video, index, active, setActive }) {
+  const ytId  = parseYTId(video.id);
+  const isChannel = !ytId && video.id && video.id.startsWith('CHANNEL:');
+  const thumb = ytId
+    ? `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`
+    : `https://picsum.photos/seed/vid${index}/800/450`;
+  const ytUrl = ytId
+    ? `https://www.youtube.com/watch?v=${ytId}`
+    : isChannel
+    ? `https://www.youtube.com/${video.id.replace('CHANNEL:','')}`
+    : `https://www.youtube.com`;
+
+  return (
+    <GlowCard onClick={() => { if(ytUrl !== '#') window.open(ytUrl,'_blank','noopener,noreferrer'); }} style={{overflow:'visible',cursor:'pointer'}}>
+      {/* Thumbnail */}
+      <div style={{position:'relative',aspectRatio:'16/9',borderRadius:'20px 20px 0 0',overflow:'hidden'}}>
+        <img src={thumb} alt={video.title}
+          style={{width:'100%',height:'100%',objectFit:'cover',
+            filter:'saturate(0.85) brightness(0.7)',transition:'filter 0.4s'}}
+          onError={e => { e.target.src=`https://picsum.photos/seed/vid${index}/800/450`; }}
+        />
+        <div style={{position:'absolute',inset:0,
+          background:'radial-gradient(circle at 50% 50%,rgba(139,92,246,0.25),transparent 70%)'}} />
+        {/* Play button */}
+        <div style={{
+          position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',
+          width:52,height:52,borderRadius:'50%',
+          background:'rgba(9,7,15,0.75)',border:`2px solid rgba(139,92,246,0.7)`,
+          backdropFilter:'blur(8px)',
+          display:'flex',alignItems:'center',justifyContent:'center',
+        }}>
+          <div style={{width:0,height:0,borderTop:'8px solid transparent',
+            borderBottom:'8px solid transparent',
+            borderLeft:`14px solid ${T.text}`,marginLeft:3}} />
+        </div>
+        {/* Index badge */}
+        <div style={{
+          position:'absolute',top:12,left:12,
+          fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:'0.7rem',
+          letterSpacing:'0.1em',
+          padding:'4px 10px',borderRadius:100,
+          background:'rgba(9,7,15,0.85)',color:T.violet,
+          border:`1px solid ${T.border}`,backdropFilter:'blur(6px)',
+        }}>
+          {String(index+1).padStart(2,'0')}
+        </div>
+      </div>
+
+      <div style={{padding:'18px 20px 20px'}}>
+        <div style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:'0.95rem',
+          lineHeight:1.35,marginBottom:8,color:T.text}}>{video.title}</div>
+        <div style={{fontFamily:'Syne,sans-serif',fontSize:'0.7rem',letterSpacing:'0.06em',
+          color:T.violet,marginBottom:10}}>{video.channel}</div>
+        <div style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.8rem',
+          color:T.muted,fontStyle:'italic',lineHeight:1.5}}>"{video.note}"</div>
+      </div>
+    </GlowCard>
+  );
+}
+
+// ── LATEST SECTION (Blog + Videos combined) ───────────────────────────────────
+function LatestSection({ setPage }) {
+  return (
+    <section style={{
+      padding:'80px clamp(16px,4vw,48px)',
+      borderTop:`1px solid ${T.border}`,
+    }}>
+      <div style={{marginBottom:40}}>
+        <div style={{fontSize:'0.68rem',letterSpacing:'0.25em',color:T.violet,
+          fontFamily:'Syne,sans-serif',textTransform:'uppercase',marginBottom:12}}>
+          ◆ Latest & Current
+        </div>
+        <h2 style={{fontFamily:'Syne,sans-serif',fontWeight:800,
+          fontSize:'clamp(1.8rem,4vw,2.8rem)',letterSpacing:'-0.03em',margin:'0 0 8px'}}>
+          Fresh off the press
+        </h2>
+        <p style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.9rem',
+          color:T.muted,maxWidth:420,lineHeight:1.6,margin:0}}>
+          Latest blog synced live from Medium. Updated whenever I publish.
+        </p>
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:20}}>
+        <LatestBlogCard setPage={setPage} />
+        <MoreOnMediumCard />
+      </div>
+    </section>
+  );
+}
+
+function MoreOnMediumCard() {
+  return (
+    <GlowCard onClick={() => window.open('https://medium.com/@sidhhesh','_blank')}
+      style={{minHeight:280,background:`linear-gradient(135deg,${T.violet},#6d28d9)`,
+        border:'none',display:'flex',flexDirection:'column',justifyContent:'flex-end',
+        padding:28}}>
+      <div style={{fontFamily:'Syne,sans-serif',fontSize:'0.7rem',letterSpacing:'0.2em',
+        textTransform:'uppercase',color:'rgba(255,255,255,0.65)',marginBottom:16}}>
+        ◆ All Essays
+      </div>
+      <h3 style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:'1.8rem',
+        lineHeight:1.1,color:'#fff',marginBottom:16,letterSpacing:'-0.03em'}}>
+        Read more<br />on Medium →
+      </h3>
+      <p style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.85rem',
+        color:'rgba(255,255,255,0.7)',lineHeight:1.6,marginBottom:0}}>
+        Branding, growth, and the craft of building audiences from zero.
+      </p>
+    </GlowCard>
+  );
+}
+
+// ── EXPERIENCE TEASER ─────────────────────────────────────────────────────────
+function ExperienceTeaser({ setPage }) {
+  return (
+    <section style={{padding:'80px clamp(16px,4vw,48px)',borderTop:`1px solid ${T.border}`}}>
+      <div style={{display:'flex',alignItems:'flex-end',justifyContent:'space-between',
+        flexWrap:'wrap',gap:16,marginBottom:40}}>
+        <div>
+          <div style={{fontSize:'0.68rem',letterSpacing:'0.25em',color:T.violet,
+            fontFamily:'Syne,sans-serif',textTransform:'uppercase',marginBottom:12}}>◆ Experience</div>
+          <h2 style={{fontFamily:'Syne,sans-serif',fontWeight:800,
+            fontSize:'clamp(1.8rem,4vw,2.8rem)',letterSpacing:'-0.03em',margin:0}}>
+            Places that shaped me
+          </h2>
+        </div>
+        <button onClick={() => { setPage('experience'); window.scrollTo(0,0); }} style={{
+          fontFamily:'Syne,sans-serif',fontWeight:700,fontSize:'0.75rem',letterSpacing:'0.1em',
+          textTransform:'uppercase',padding:'10px 22px',borderRadius:100,
+          border:`1px solid ${T.border}`,background:'transparent',color:T.text,cursor:'pointer',
+          whiteSpace:'nowrap',
+        }}>Full Timeline →</button>
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:16}}>
+        {EXPERIENCES.map((exp,i) => (
+          <GlowCard key={exp.company} onClick={() => { setPage('experience'); window.scrollTo(0,0); }}
+            style={{padding:24}}>
+            <div style={{display:'flex',alignItems:'flex-start',justifyContent:'space-between',
+              gap:12,marginBottom:16}}>
+              <ExpTeaseLogoH exp={exp} />
+              <span style={{fontFamily:'Syne,sans-serif',fontSize:'0.65rem',color:T.muted,
+                whiteSpace:'nowrap',marginTop:4}}>
+                {exp.period.split('—')[0].trim()}
+              </span>
+            </div>
+            <div style={{fontFamily:'Syne,sans-serif',fontWeight:700,fontSize:'0.85rem',
+              color:exp.color||T.violet,marginBottom:8,lineHeight:1.3}}>{exp.role}</div>
+            <p style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.8rem',
+              color:T.muted,lineHeight:1.6,margin:0}}>{exp.summary}</p>
+          </GlowCard>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// ── PARTNERS MARQUEE ──────────────────────────────────────────────────────────
+function PartnersMarquee() {
+  const row1 = PARTNERSHIPS.slice(0, 7);
+  const row2 = PARTNERSHIPS.slice(7);
+  return (
+    <section style={{padding:'80px 0',borderTop:`1px solid ${T.border}`,overflow:'hidden'}}>
+      <div style={{padding:'0 clamp(16px,4vw,48px)',marginBottom:40}}>
+        <div style={{fontSize:'0.68rem',letterSpacing:'0.25em',color:T.violet,
+          fontFamily:'Syne,sans-serif',textTransform:'uppercase',marginBottom:12}}>
+          ◆ Partnerships & Clients
+        </div>
+        <h2 style={{fontFamily:'Syne,sans-serif',fontWeight:800,
+          fontSize:'clamp(1.8rem,4vw,2.8rem)',letterSpacing:'-0.03em',margin:'0 0 8px'}}>
+          Brands in the orbit
+        </h2>
+        <p style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.85rem',
+          color:T.muted,maxWidth:480,lineHeight:1.6,margin:0}}>
+          Campaigns, content collaborations and client work across 6 years. Not direct employment — partnerships and collaborations.
+        </p>
+      </div>
+      <div style={{position:'relative'}}>
+        <div style={{position:'absolute',left:0,top:0,bottom:0,width:100,
+          background:`linear-gradient(to right,${T.bg},transparent)`,zIndex:2,pointerEvents:'none'}} />
+        <div style={{position:'absolute',right:0,top:0,bottom:0,width:100,
+          background:`linear-gradient(to left,${T.bg},transparent)`,zIndex:2,pointerEvents:'none'}} />
+        <div style={{overflow:'hidden',marginBottom:12}}>
+          <div style={{display:'flex',gap:12,width:'max-content',animation:'marqL 50s linear infinite'}}>
+            {[...row1,...row1,...row1].map((p,i) => <PartnerChip key={i} p={p} />)}
+          </div>
+        </div>
+        <div style={{overflow:'hidden'}}>
+          <div style={{display:'flex',gap:12,width:'max-content',animation:'marqR 60s linear infinite'}}>
+            {[...row2,...row2,...row2].map((p,i) => <PartnerChip key={i} p={p} />)}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ExpTeaseLogoH({ exp }) {
+  const logoMeta = EXP_LOGOS[exp.company] || {};
+  const [err, setErr] = useStateH(false);
+  if (logoMeta.logo && !err) return (
+    <img src={logoMeta.logo} alt={exp.company}
+      style={{height:32,maxWidth:100,objectFit:'contain',borderRadius:6}}
+      onError={()=>setErr(true)} />
+  );
+  return <span style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:'1rem',
+    color:exp.color||T.violet}}>{exp.company}</span>;
+}
+
+function PartnerChip({ p }) {
+  const [src, setSrc] = useStateH(0);
+  // Use local logo if available, else Google favicon
+  const sources = p.logo
+    ? [p.logo]
+    : p.domain ? [`https://www.google.com/s2/favicons?domain=${p.domain}&sz=64`] : [];
+  const handleErr = () => setSrc(v => v + 1);
+  const showImg = src < sources.length;
+
+  return (
+    <div style={{
+      display:'inline-flex', alignItems:'center', gap:10,
+      padding:'12px 22px', borderRadius:14,
+      border:`1px solid ${T.border}`, background:T.card,
+      minWidth:170, whiteSpace:'nowrap', flexShrink:0,
+    }}>
+      {showImg ? (
+        <img
+          key={src}
+          src={sources[src]}
+          alt={p.name}
+          style={{
+            height: src === 0 ? 22 : 18,
+            maxWidth: 80,
+            objectFit:'contain',
+            filter:'brightness(0) invert(1)',
+            opacity:0.85,
+          }}
+          onError={handleErr}
+        />
+      ) : (
+        <span style={{
+          width:8, height:8, borderRadius:'50%', flexShrink:0,
+          background: p.color || T.violet,
+        }} />
+      )}
+      <span style={{
+        fontFamily:'Syne,sans-serif', fontWeight:700, fontSize:'0.78rem',
+        letterSpacing:'0.06em', color: T.muted, textTransform:'uppercase',
+      }}>{p.name}</span>
+    </div>
+  );
+}
+
+// ── MEDIA GALLERY ─────────────────────────────────────────────────────────────
+function MediaGallery() {
+  return (
+    <section style={{ padding:'80px 0', borderTop:`1px solid ${T.border}`, overflow:'hidden' }}>
+      <div style={{ padding:'0 clamp(16px,4vw,48px)', marginBottom:40 }}>
+        <div style={{ fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+          fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:12 }}>
+          ◆ In The Field
+        </div>
+        <h2 style={{ fontFamily:'Syne,sans-serif', fontWeight:800,
+          fontSize:'clamp(1.8rem,4vw,2.8rem)', letterSpacing:'-0.03em', margin:'0 0 8px' }}>
+          Moments &amp; Media
+        </h2>
+        <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.85rem',
+          color:T.muted, maxWidth:480, lineHeight:1.6, margin:0 }}>
+          STANFest, creator shoots, event branding — fragments from six years on the ground.
+        </p>
+      </div>
+
+      {/* Scrolling strip */}
+      <div style={{ position:'relative', overflow:'hidden' }}>
+        <div style={{ position:'absolute', left:0, top:0, bottom:0, width:100,
+          background:`linear-gradient(to right,${T.bg},transparent)`, zIndex:2, pointerEvents:'none' }} />
+        <div style={{ position:'absolute', right:0, top:0, bottom:0, width:100,
+          background:`linear-gradient(to left,${T.bg},transparent)`, zIndex:2, pointerEvents:'none' }} />
+
+        <div style={{ display:'flex', gap:16, width:'max-content', animation:'marqR 55s linear infinite' }}>
+          {[...MEDIA_GALLERY, ...MEDIA_GALLERY, ...MEDIA_GALLERY].map((item, i) => (
+            <MediaCard key={i} item={item} index={i} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MediaCard({ item, index }) {
+  const [err, setErr] = useStateH(false);
+  const isVideo   = item.type === 'video';
+  const isYT      = item.type === 'youtube';
+  const thumbUrl  = isYT
+    ? `https://img.youtube.com/vi/${item.src}/maxresdefault.jpg`
+    : item.src;
+
+  return (
+    <div style={{
+      position:'relative', width:260, height:340, borderRadius:18,
+      overflow:'hidden', flexShrink:0,
+      border:`1px solid ${T.border}`,
+      background: T.card,
+    }}>
+      {/* Image / thumbnail */}
+      {!err ? (
+        <img
+          src={thumbUrl}
+          alt={item.caption}
+          style={{ width:'100%', height:'100%', objectFit:'cover',
+            filter:'saturate(0.85) brightness(0.7)' }}
+          onError={() => setErr(true)}
+        />
+      ) : (
+        /* Placeholder when no real image yet */
+        <div style={{
+          width:'100%', height:'100%',
+          display:'flex', flexDirection:'column',
+          alignItems:'center', justifyContent:'center',
+          background:`linear-gradient(135deg,${T.surface},${T.card})`,
+          gap:12,
+        }}>
+          <div style={{
+            fontFamily:'Syne,sans-serif', fontWeight:800, fontSize:'2rem',
+            color:`${T.violet}40`,
+          }}>📷</div>
+          <div style={{
+            fontFamily:'Syne,sans-serif', fontSize:'0.65rem', letterSpacing:'0.12em',
+            textTransform:'uppercase', color:`${T.muted}`, textAlign:'center', padding:'0 20px',
+          }}>{item.caption}</div>
+          <div style={{
+            fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.7rem',
+            color:`rgba(245,240,255,0.3)`, textAlign:'center', padding:'0 16px', lineHeight:1.5,
+          }}>Drop your photo here:<br /><span style={{color:T.violet}}>{item.src}</span></div>
+        </div>
+      )}
+
+      {/* Overlay */}
+      <div style={{ position:'absolute', inset:0,
+        background:'linear-gradient(to bottom,transparent 40%,rgba(9,7,15,0.9))' }} />
+
+      {/* Play icon for video */}
+      {(isVideo || isYT) && (
+        <div style={{
+          position:'absolute', top:'50%', left:'50%',
+          transform:'translate(-50%,-50%)',
+          width:46, height:46, borderRadius:'50%',
+          background:'rgba(9,7,15,0.7)',
+          border:`2px solid rgba(139,92,246,0.6)`,
+          display:'flex', alignItems:'center', justifyContent:'center',
+        }}>
+          <div style={{ width:0, height:0,
+            borderTop:'7px solid transparent',
+            borderBottom:'7px solid transparent',
+            borderLeft:`12px solid ${T.text}`, marginLeft:3 }} />
+        </div>
+      )}
+
+      {/* Caption */}
+      <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'16px 18px' }}>
+        <div style={{ fontFamily:'Syne,sans-serif', fontSize:'0.6rem', letterSpacing:'0.15em',
+          textTransform:'uppercase', color:T.violet, marginBottom:4 }}>◆ {item.tag}</div>
+        <div style={{ fontFamily:'Syne,sans-serif', fontWeight:700, fontSize:'0.9rem',
+          color:T.text, lineHeight:1.3 }}>{item.caption}</div>
+      </div>
+    </div>
+  );
+}
+
+// ── RANDOM WORK VIDEO ─────────────────────────────────────────────────────────
+const WORK_PLAYLIST_ID = 'PL-eSfG7cS5RixL0rWR73bSPf-dzQLaRDi';
+
+function FeaturedWorkVideo() {
+  const randomIndex = useRefH(() => Math.floor(Math.random() * 20)).current;
+  const embedUrl = `https://www.youtube.com/embed/videoseries?list=${WORK_PLAYLIST_ID}&index=${randomIndex}&rel=0&modestbranding=1`;
+  const playlistUrl = `https://www.youtube.com/playlist?list=${WORK_PLAYLIST_ID}`;
+
+  return (
+    <section style={{ padding:'80px clamp(16px,4vw,48px)', borderTop:`1px solid ${T.border}` }}>
+      <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', flexWrap:'wrap', gap:16, marginBottom:32 }}>
+        <div>
+          <div style={{ fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+            fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:12 }}>
+            ◆ Featured Work · Random Pick
+          </div>
+          <h2 style={{ fontFamily:'Syne,sans-serif', fontWeight:800,
+            fontSize:'clamp(1.8rem,4vw,2.8rem)', letterSpacing:'-0.03em', margin:0 }}>
+            From the work reel
+          </h2>
+        </div>
+        <a href={playlistUrl} target="_blank" rel="noreferrer" style={{
+          fontFamily:'Syne,sans-serif', fontWeight:700, fontSize:'0.78rem',
+          letterSpacing:'0.1em', textTransform:'uppercase',
+          padding:'11px 24px', borderRadius:100,
+          border:`1px solid ${T.violet}`, color:T.violet,
+          textDecoration:'none', whiteSpace:'nowrap',
+          transition:'all 0.25s', display:'inline-block',
+        }}
+        onMouseEnter={e=>{e.target.style.background=T.violet;e.target.style.color='#09070f'}}
+        onMouseLeave={e=>{e.target.style.background='transparent';e.target.style.color=T.violet}}>
+          View Full Playlist →
+        </a>
+      </div>
+
+      <div style={{
+        borderRadius:20, overflow:'hidden',
+        border:`1px solid ${T.border}`,
+        aspectRatio:'16/9', maxWidth:900, background:T.card,
+        boxShadow:'0 20px 60px rgba(0,0,0,0.4)',
+      }}>
+        <iframe
+          src={embedUrl}
+          title="Work Reel"
+          allowFullScreen={true}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          style={{ width:'100%', height:'100%', border:'none', display:'block' }}
+        />
+      </div>
+
+      <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.8rem',
+        color:T.muted, marginTop:14, fontStyle:'italic' }}>
+        ↑ A random video from the playlist — refreshes on every visit.
+      </p>
+    </section>
+  );
+}
+
+// ── LATEST TWEET ──────────────────────────────────────────────────────────────
+function LatestTweetSection() {
+  const ref = useRefH(null);
+
+  useEffectH(() => {
+    const load = () => {
+      if (window.twttr && window.twttr.widgets) {
+        window.twttr.widgets.load(ref.current);
+      }
+    };
+    if (!document.getElementById('twitter-wjs')) {
+      const s = document.createElement('script');
+      s.id = 'twitter-wjs';
+      s.src = 'https://platform.twitter.com/widgets.js';
+      s.onload = load;
+      document.body.appendChild(s);
+    } else {
+      load();
+    }
+  }, []);
+
+  return (
+    <section style={{ padding:'80px clamp(16px,4vw,48px)', borderTop:`1px solid ${T.border}` }}>
+      <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', flexWrap:'wrap', gap:16, marginBottom:32 }}>
+        <div>
+          <div style={{ fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+            fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:12 }}>
+            ◆ Latest on X
+          </div>
+          <h2 style={{ fontFamily:'Syne,sans-serif', fontWeight:800,
+            fontSize:'clamp(1.8rem,4vw,2.8rem)', letterSpacing:'-0.03em', margin:0 }}>
+            From the feed
+          </h2>
+        </div>
+        <a href="https://x.com/sidshots" target="_blank" rel="noreferrer" style={{
+          fontFamily:'Syne,sans-serif', fontWeight:700, fontSize:'0.78rem',
+          letterSpacing:'0.1em', textTransform:'uppercase',
+          padding:'11px 24px', borderRadius:100,
+          border:`1px solid ${T.border}`, color:T.text,
+          textDecoration:'none', whiteSpace:'nowrap', display:'inline-block',
+        }}>
+          @sidshots on X ↗
+        </a>
+      </div>
+
+      <div ref={ref} style={{ maxWidth:550 }}>
+        <a className="twitter-timeline"
+          data-tweet-limit="1"
+          data-theme="dark"
+          data-chrome="noheader nofooter noborders transparent"
+          href="https://twitter.com/sidshots">
+          Latest tweet by @sidshots
+        </a>
+      </div>
+    </section>
+  );
+}
+
+// ── CTA ───────────────────────────────────────────────────────────────────────
+function HomeCTA({ setPage }) {
+  return (
+    <section style={{
+      padding:'100px clamp(16px,4vw,48px)',
+      borderTop:`1px solid ${T.border}`,textAlign:'center',
+    }}>
+      <div style={{fontSize:'0.68rem',letterSpacing:'0.25em',color:T.violet,
+        fontFamily:'Syne,sans-serif',textTransform:'uppercase',marginBottom:20}}>◆ Say Hi</div>
+      <h2 style={{
+        fontFamily:'Syne,sans-serif',fontWeight:800,
+        fontSize:'clamp(3rem,8vw,6rem)',lineHeight:1,
+        letterSpacing:'-0.04em',marginBottom:32,
+      }}>
+        Let's build<br />
+        <span style={{background:'linear-gradient(135deg,#e9d5ff,#8b5cf6)',
+          WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent'}}>
+          something loud.
+        </span>
+      </h2>
+      <a href="mailto:sidshot07@gmail.com" style={{
+        fontFamily:'Syne,sans-serif',fontWeight:700,fontSize:'1rem',
+        letterSpacing:'0.06em',color:T.text,textDecoration:'none',
+        display:'inline-flex',alignItems:'center',gap:8,
+        padding:'16px 36px',borderRadius:100,
+        border:`1px solid ${T.border}`,
+        background:'rgba(139,92,246,0.08)',
+        transition:'all 0.3s',
+      }}
+      onMouseEnter={e=>{e.currentTarget.style.background=T.violet;e.currentTarget.style.color='#09070f'}}
+      onMouseLeave={e=>{e.currentTarget.style.background='rgba(139,92,246,0.08)';e.currentTarget.style.color=T.text}}>
+        sidshot07@gmail.com →
+      </a>
+    </section>
+  );
+}
+
+function HomePage({ setPage }) {
+  return (
+    <div>
+      <Hero setPage={setPage} />
+      <LatestSection setPage={setPage} />
+      <VideoPicksSection />
+      <ExperienceTeaser setPage={setPage} />
+      <PartnersMarquee />
+      <FeaturedWorkVideo />
+      <MediaGallery />
+      <LatestTweetSection />
+      <HomeCTA setPage={setPage} />
+    </div>
+  );
+}
+
+Object.assign(window, { HomePage });
+
+
+// ── INNER PAGES ───────────────────────────────────────────────────────────────
+const { useState: useStateP, useEffect: useEffectP } = React;
+
+// ── EXPERIENCE PAGE ───────────────────────────────────────────────────────────
+function ExperiencePage() {
+  return (
+    <div>
+      <PageHeader
+        eyebrow="Experience"
+        title="Six years, four rooms."
+        sub="Branding, content and growth across India's gaming and creator economy. The roles, the wins, and what I learned in each."
+      />
+      <section style={{ padding: '60px clamp(16px,4vw,48px)' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {EXPERIENCES.map((exp, i) => (
+            <ExpCard key={exp.company} exp={exp} defaultOpen={i === 0} />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function ExpCard({ exp, defaultOpen }) {
+  const [open, setOpen] = useStateP(defaultOpen);
+  const [logoSrc, setLogoSrc] = useStateP(0);
+
+  const logoMeta = EXP_LOGOS[exp.company] || { color: exp.color };
+  const sources = logoMeta.logo
+    ? [logoMeta.logo]
+    : (logoMeta.domain ? [`https://www.google.com/s2/favicons?domain=${logoMeta.domain}&sz=64`] : []);
+  const showImg = logoSrc < sources.length;
+
+  return (
+    <div style={{
+      borderRadius: 20,
+      border: `1px solid ${open ? 'rgba(139,92,246,0.4)' : T.border}`,
+      background: open ? 'linear-gradient(135deg,rgba(139,92,246,0.08),rgba(26,18,48,0.8))' : T.card,
+      transition: 'all 0.4s ease', overflow: 'hidden',
+    }}>
+      {/* Header row */}
+      <div onClick={() => setOpen(!open)} style={{
+        padding: '24px 28px', cursor: 'pointer',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20,
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20, flex: 1, minWidth: 0 }}>
+          {/* Logo box */}
+          <div style={{
+            width: 56, height: 56, borderRadius: 14, flexShrink: 0,
+            background: `${logoMeta.color || exp.color}15`,
+            border: `1px solid ${logoMeta.color || exp.color}30`,
+            display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
+          }}>
+            {showImg ? (
+              <img
+                key={logoSrc}
+                src={sources[logoSrc]}
+                alt={exp.company}
+                style={{ width: logoMeta.logo ? 40 : 28, height: logoMeta.logo ? 40 : 28,
+                  objectFit: 'contain', borderRadius: logoMeta.logo ? 8 : 4, opacity: 0.95 }}
+                onError={() => setLogoSrc(v => v + 1)}
+              />
+            ) : (
+              <span style={{
+                fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: '1.1rem',
+                color: logoMeta.color || exp.color,
+              }}>
+                {exp.company.slice(0, 2).toUpperCase()}
+              </span>
+            )}
+          </div>
+
+          <div style={{ minWidth: 0 }}>
+            <div style={{
+              fontFamily: 'Syne,sans-serif', fontWeight: 800,
+              fontSize: 'clamp(1rem,2.5vw,1.3rem)', color: T.text,
+              marginBottom: 4, lineHeight: 1.2,
+            }}>{exp.company}</div>
+            <div style={{
+              fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.85rem',
+              color: logoMeta.color || exp.color, fontWeight: 500,
+            }}>{exp.role}</div>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexShrink: 0 }}>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.75rem', color: T.muted }}>{exp.period}</div>
+            <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', color: T.muted, opacity: 0.6, marginTop: 2 }}>📍 {exp.location}</div>
+          </div>
+          <div style={{
+            width: 28, height: 28, borderRadius: '50%',
+            border: `1px solid ${T.border}`,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: T.violet, fontSize: '1.1rem', transition: 'transform 0.3s',
+            transform: open ? 'rotate(45deg)' : 'none', flexShrink: 0,
+          }}>+</div>
+        </div>
+      </div>
+
+      {/* Expanded body */}
+      {open && (
+        <div style={{ padding: '0 28px 28px', borderTop: `1px solid ${T.border}` }}>
+          <p style={{
+            fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '1rem',
+            lineHeight: 1.75, color: 'rgba(245,240,255,0.85)', margin: '24px 0 28px',
+          }}>{exp.summary}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 32 }}>
+            <div>
+              <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.2em',
+                textTransform: 'uppercase', color: T.muted, marginBottom: 16 }}>◆ Key Wins</div>
+              <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {exp.wins.map((w, i) => (
+                  <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                    <span style={{ color: logoMeta.color || exp.color, flexShrink: 0, marginTop: 3 }}>◆</span>
+                    <span style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.85rem',
+                      color: T.muted, lineHeight: 1.6 }}>{w}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.2em',
+                textTransform: 'uppercase', color: T.muted, marginBottom: 16 }}>◆ Focus Areas</div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {exp.tags.map(tag => <Tag key={tag} color={logoMeta.color || exp.color}>{tag}</Tag>)}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── BLOG PAGE ─────────────────────────────────────────────────────────────────
+function BlogPage() {
+  const [posts, setPosts] = useStateP(FALLBACK_POSTS);
+  const [loading, setLoading] = useStateP(true);
+
+  useEffectP(() => {
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sidhhesh')
+      .then(r => r.json())
+      .then(data => {
+        if (data.items && data.items.length > 0) {
+          const mapped = data.items.map(item => {
+            const tmp = document.createElement('div');
+            tmp.innerHTML = item.description || '';
+            return {
+              title:       item.title,
+              link:        item.link,
+              description: tmp.textContent.slice(0, 200) + '…',
+              pubDate:     new Date(item.pubDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
+              readMin:     Math.max(3, Math.round(tmp.textContent.split(' ').length / 200)),
+              tag:         (item.categories && item.categories[0]) || 'Article',
+              thumbnail:   item.thumbnail ||
+                (item.content && item.content.match(/<img[^>]+src="([^"]+)"/)?.[1]) ||
+                `https://picsum.photos/seed/${item.title.slice(0,8)}/800/450`,
+            };
+          });
+          setPosts(mapped);
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, []);
+
+  return (
+    <div>
+      <PageHeader
+        eyebrow="Journal"
+        title="Notes, written."
+        sub="Essays on brand, growth, and the craft of building audiences from zero. Live-synced from Medium."
+      />
+      <section style={{ padding: '60px clamp(16px,4vw,48px)' }}>
+        {loading && (
+          <div style={{ fontFamily: 'Syne,sans-serif', color: T.muted, marginBottom: 32,
+            fontSize: '0.9rem', letterSpacing: '0.08em' }}>Loading from Medium…</div>
+        )}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+          {posts.map((post, i) => (
+            <BlogCard key={i} post={post} featured={i === 0} />
+          ))}
+        </div>
+        <div style={{ marginTop: 48, textAlign: 'center' }}>
+          <a href="https://medium.com/@sidhhesh" target="_blank" rel="noreferrer" style={{
+            fontFamily: 'Syne,sans-serif', fontWeight: 700, fontSize: '0.8rem',
+            letterSpacing: '0.12em', textTransform: 'uppercase',
+            color: T.violet, textDecoration: 'none',
+            padding: '14px 32px', borderRadius: 100,
+            border: `1px solid ${T.border}`,
+            display: 'inline-block', transition: 'all 0.3s',
+          }}
+          onMouseEnter={e => e.target.style.background = 'rgba(139,92,246,0.12)'}
+          onMouseLeave={e => e.target.style.background = 'transparent'}>
+            All Essays on Medium →
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function BlogCard({ post, featured }) {
+  return (
+    <GlowCard onClick={() => window.open(post.link || 'https://medium.com/@sidhhesh', '_blank')}
+      style={{ display: 'grid', gridTemplateColumns: featured ? '1fr' : 'repeat(auto-fit,minmax(240px,1fr))', overflow: 'hidden' }}>
+      {post.thumbnail && (
+        <div style={{ aspectRatio: featured ? '21/6' : '16/9', overflow: 'hidden', borderRadius: featured ? '20px 20px 0 0' : '20px 0 0 20px', minHeight: 180 }}>
+          <img src={post.thumbnail} alt={post.title}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(0.75) brightness(0.65)' }}
+            onError={e => { e.target.src = `https://picsum.photos/seed/blog${post.title.length}/800/450`; }} />
+        </div>
+      )}
+      <div style={{ padding: '24px 28px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
+          <Tag>{post.tag}</Tag>
+          <span style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', color: T.muted }}>{post.pubDate}</span>
+          <span style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', color: T.muted }}>· {post.readMin} min read</span>
+        </div>
+        <h2 style={{ fontFamily: 'Syne,sans-serif', fontWeight: 800,
+          fontSize: featured ? 'clamp(1.4rem,3vw,2rem)' : '1.15rem',
+          lineHeight: 1.25, marginBottom: 12, color: T.text }}>{post.title}</h2>
+        <p style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.875rem',
+          lineHeight: 1.7, color: T.muted, marginBottom: 16 }}>{post.description}</p>
+        <div style={{ fontFamily: 'Syne,sans-serif', fontWeight: 700, fontSize: '0.78rem',
+          letterSpacing: '0.08em', color: T.violet }}>Read on Medium →</div>
+      </div>
+    </GlowCard>
+  );
+}
+
+// ── WORK PAGE ─────────────────────────────────────────────────────────────────
+const WORK_ITEMS = [
+  { id:1, title:'STANFest 2024 — Brand Film', cat:'Case 01', year:'2024', tag:'Brand',
+    desc:'30K footfall, 400M+ impressions, 200+ creators. India\'s biggest gaming creator festival.', thumb:'https://picsum.photos/seed/stan24/800/500' },
+  { id:2, title:'GameOnAir — Interview IP', cat:'Case 02', year:'2023', tag:'Content IP',
+    desc:'Original interview series, 10M+ views across 10 episodes. Built from zero.', thumb:'https://picsum.photos/seed/goa23/800/500' },
+  { id:3, title:'Sportskeeda Esports Rebrand', cat:'Case 03', year:'2023', tag:'Rebrand',
+    desc:'Repositioned from general gaming to esports-first. Reach 1M→12M in 14 months.', thumb:'https://picsum.photos/seed/sk23/800/500' },
+  { id:4, title:'Pick Your Best — Interactive Format', cat:'Case 04', year:'2023', tag:'Format',
+    desc:'Voting-led interactive content format. 10K+ follower growth in 5 days.', thumb:'https://picsum.photos/seed/pyb23/800/500' },
+  { id:5, title:'STAN Photon Web3 GTM', cat:'Case 05', year:'2022', tag:'Web3',
+    desc:'3,000+ onchain wallets at launch. India\'s first gaming Web3 GTM campaign.', thumb:'https://picsum.photos/seed/w3g22/800/500' },
+  { id:6, title:'WEC FreeFire Tri-Nation', cat:'Case 06', year:'2021', tag:'Esports',
+    desc:'1M+ impressions, 20K+ followers in a short-cycle esports tournament campaign.', thumb:'https://picsum.photos/seed/wec21/800/500' },
+];
+
+function WorkPage() {
+  return (
+    <div>
+      <PageHeader
+        eyebrow="Work"
+        title="Case Studies."
+        sub="Campaigns, content IPs, and brand moments from the last six years. Gaming, esports, and the creator economy."
+      />
+      <section style={{ padding: '60px clamp(16px,4vw,48px)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 20 }}>
+          {WORK_ITEMS.map(item => <WorkCard key={item.id} item={item} />)}
+        </div>
+        {/* YouTube Playlist */}
+        <div style={{ marginTop: 60 }}>
+          <div style={{ fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+            fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:12 }}>◆ Watch the Work</div>
+          <h2 style={{ fontFamily:'Syne,sans-serif', fontWeight:800,
+            fontSize:'clamp(1.6rem,3.5vw,2.4rem)', letterSpacing:'-0.03em', margin:'0 0 24px' }}>Work Reel</h2>
+          <PlaylistEmbed />
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function PlaylistEmbed() {
+  // ── Paste your YouTube playlist ID here (part after list= in the URL) ──
+  const PLAYLIST_ID = 'PL-eSfG7cS5RixL0rWR73bSPf-dzQLaRDi';
+  const isPlaceholder = PLAYLIST_ID.startsWith('PLxxxxx');
+  if (isPlaceholder) {
+    return (
+      <div style={{
+        borderRadius:20, border:`1px solid ${T.border}`, background:T.card,
+        padding:'48px 40px', textAlign:'center', maxWidth:700,
+      }}>
+        <div style={{fontSize:'2.5rem',marginBottom:16}}>🎬</div>
+        <div style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:'1.1rem',color:T.text,marginBottom:10}}>
+          Add your YouTube Playlist
+        </div>
+        <p style={{fontFamily:'Plus Jakarta Sans,sans-serif',fontSize:'0.85rem',color:T.muted,lineHeight:1.7}}>
+          Share your unlisted playlist ID and I'll embed it here.<br/>
+          Find it: <strong style={{color:T.violet}}>YouTube Studio → Playlists → copy the ID after list= in the URL</strong>
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div style={{borderRadius:20,overflow:'hidden',border:`1px solid ${T.border}`,maxWidth:900,aspectRatio:'16/9'}}>
+      <iframe
+        src={`https://www.youtube.com/embed/videoseries?list=${PLAYLIST_ID}&rel=0&modestbranding=1`}
+        title="Work Reel" allowFullScreen={true}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        style={{width:'100%',height:'100%',border:'none',display:'block'}}
+      />
+    </div>
+  );
+}
+
+function WorkCard({ item }) {
+  const [hov, setHov] = useStateP(false);
+  return (
+    <div
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        borderRadius: 20, overflow: 'hidden',
+        border: `1px solid ${hov ? 'rgba(139,92,246,0.4)' : T.border}`,
+        background: T.card, cursor: 'pointer',
+        transform: hov ? 'translateY(-5px)' : 'none',
+        transition: 'all 0.4s cubic-bezier(0.22,1,0.36,1)',
+        boxShadow: hov ? '0 20px 60px rgba(139,92,246,0.15)' : '0 4px 20px rgba(0,0,0,0.3)',
+      }}>
+      <div style={{ position: 'relative', aspectRatio: '16/10', overflow: 'hidden' }}>
+        <img src={item.thumb} alt={item.title}
+          style={{ width: '100%', height: '100%', objectFit: 'cover',
+            filter: 'saturate(0.75) hue-rotate(-10deg) brightness(0.65)',
+            transform: hov ? 'scale(1.05)' : 'scale(1)', transition: 'transform 0.6s ease' }} />
+        <div style={{ position: 'absolute', inset: 0,
+          background: hov
+            ? 'radial-gradient(circle at 50% 50%,rgba(139,92,246,0.35),rgba(9,7,15,0.3))'
+            : 'linear-gradient(to bottom,transparent 30%,rgba(9,7,15,0.7))' }} />
+        <div style={{
+          position: 'absolute', top: 14, left: 14,
+          fontFamily: 'Syne,sans-serif', fontWeight: 700, fontSize: '0.65rem',
+          letterSpacing: '0.15em', textTransform: 'uppercase',
+          padding: '5px 12px', borderRadius: 100,
+          background: 'rgba(9,7,15,0.8)', color: T.violet,
+          border: `1px solid ${T.border}`, backdropFilter: 'blur(8px)',
+        }}>{item.tag}</div>
+        {/* Play icon overlay */}
+        <div style={{
+          position: 'absolute', top: '50%', left: '50%',
+          transform: `translate(-50%,-50%) scale(${hov ? 1 : 0.85})`,
+          opacity: hov ? 1 : 0, transition: 'all 0.3s',
+          width: 52, height: 52, borderRadius: '50%',
+          background: 'rgba(9,7,15,0.7)', border: `2px solid rgba(139,92,246,0.7)`,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          <div style={{ width: 0, height: 0, borderTop: '8px solid transparent',
+            borderBottom: '8px solid transparent', borderLeft: `14px solid ${T.text}`, marginLeft: 3 }} />
+        </div>
+      </div>
+      <div style={{ padding: '20px 22px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+          <span style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.1em', color: T.muted }}>{item.cat}</span>
+          <span style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', color: T.muted }}>{item.year}</span>
+        </div>
+        <h3 style={{ fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: '1rem',
+          lineHeight: 1.3, marginBottom: 8, color: T.text }}>{item.title}</h3>
+        <p style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.8rem',
+          color: T.muted, lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+      </div>
+    </div>
+  );
+}
+
+// ── CONTACT PAGE ──────────────────────────────────────────────────────────────
+function ContactPage() {
+  const [sent, setSent] = useStateP(false);
+  const [form, setForm] = useStateP({ name: '', email: '', message: '' });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.location.href = `mailto:sidshot07@gmail.com?subject=Hi from ${form.name}&body=${encodeURIComponent(form.message + '\n\n— ' + form.name + ' (' + form.email + ')')}`;
+    setSent(true);
+  };
+
+  return (
+    <div>
+      <PageHeader eyebrow="Contact" title="Let's talk." sub="Open to brand collaborations, content strategy projects, and interesting conversations." />
+      <section style={{ padding: '60px clamp(16px,4vw,48px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 48, maxWidth: 1000 }}>
+        {/* Left info */}
+        <div>
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.2em',
+              textTransform: 'uppercase', color: T.muted, marginBottom: 12 }}>◆ Direct</div>
+            <a href="mailto:sidshot07@gmail.com" style={{
+              fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: '1.1rem',
+              color: T.violet, textDecoration: 'none', display: 'block', marginBottom: 8,
+            }}>sidshot07@gmail.com</a>
+          </div>
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.2em',
+              textTransform: 'uppercase', color: T.muted, marginBottom: 16 }}>◆ On the Internet</div>
+            {[
+              { label: 'LinkedIn', url: 'https://linkedin.com/in/sidhhesh-shirsath' },
+              { label: 'Medium', url: 'https://medium.com/@sidhhesh' },
+              { label: 'Instagram', url: 'https://instagram.com' },
+            ].map(l => (
+              <a key={l.label} href={l.url} target="_blank" rel="noreferrer" style={{
+                display: 'block', fontFamily: 'Syne,sans-serif', fontWeight: 700,
+                fontSize: '0.9rem', color: T.text, textDecoration: 'none',
+                padding: '12px 0', borderBottom: `1px solid ${T.border}`,
+                transition: 'color 0.25s',
+              }}
+              onMouseEnter={e => e.target.style.color = T.violet}
+              onMouseLeave={e => e.target.style.color = T.text}>
+                {l.label} ↗
+              </a>
+            ))}
+          </div>
+          <div style={{
+            padding: '20px', borderRadius: 16, border: `1px solid ${T.border}`,
+            background: 'rgba(139,92,246,0.05)',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981',
+                display: 'inline-block', animation: 'blink 2s ease-in-out infinite' }} />
+              <span style={{ fontFamily: 'Syne,sans-serif', fontWeight: 700, fontSize: '0.8rem', color: T.text }}>Available for work</span>
+            </div>
+            <p style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.8rem',
+              color: T.muted, lineHeight: 1.6, margin: 0 }}>
+              Open to brand strategy, content & growth roles, and creative consulting.
+            </p>
+          </div>
+        </div>
+
+        {/* Right form */}
+        <div>
+          {sent ? (
+            <div style={{ padding: 40, borderRadius: 20, background: T.card,
+              border: `1px solid ${T.border}`, textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', marginBottom: 16 }}>✉️</div>
+              <div style={{ fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: '1.3rem',
+                color: T.text, marginBottom: 8 }}>Message sent!</div>
+              <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.85rem', color: T.muted }}>
+                Your email client opened. I'll get back to you soon.
+              </div>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {[
+                { field: 'name', label: 'Your Name', type: 'text', placeholder: 'Who are you?' },
+                { field: 'email', label: 'Email', type: 'email', placeholder: 'your@email.com' },
+              ].map(({ field, label, type, placeholder }) => (
+                <div key={field}>
+                  <label style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.7rem',
+                    letterSpacing: '0.12em', textTransform: 'uppercase', color: T.muted,
+                    display: 'block', marginBottom: 8 }}>{label}</label>
+                  <input type={type} placeholder={placeholder} required
+                    value={form[field]}
+                    onChange={e => setForm(f => ({ ...f, [field]: e.target.value }))}
+                    style={{
+                      width: '100%', padding: '14px 18px', borderRadius: 12, boxSizing: 'border-box',
+                      border: `1px solid ${T.border}`, background: T.card,
+                      color: T.text, fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.9rem',
+                      outline: 'none', transition: 'border-color 0.3s',
+                    }}
+                    onFocus={e => e.target.style.borderColor = T.violet}
+                    onBlur={e => e.target.style.borderColor = T.border} />
+                </div>
+              ))}
+              <div>
+                <label style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.7rem',
+                  letterSpacing: '0.12em', textTransform: 'uppercase', color: T.muted,
+                  display: 'block', marginBottom: 8 }}>Message</label>
+                <textarea placeholder="What's on your mind?" required rows={5}
+                  value={form.message}
+                  onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                  style={{
+                    width: '100%', padding: '14px 18px', borderRadius: 12, boxSizing: 'border-box',
+                    border: `1px solid ${T.border}`, background: T.card,
+                    color: T.text, fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.9rem',
+                    outline: 'none', resize: 'vertical', transition: 'border-color 0.3s',
+                  }}
+                  onFocus={e => e.target.style.borderColor = T.violet}
+                  onBlur={e => e.target.style.borderColor = T.border} />
+              </div>
+              <button type="submit" style={{
+                fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: '0.85rem',
+                letterSpacing: '0.1em', textTransform: 'uppercase',
+                padding: '16px 32px', borderRadius: 100, border: 'none',
+                background: T.violet, color: '#09070f', cursor: 'pointer',
+                transition: 'all 0.3s', alignSelf: 'flex-start',
+              }}
+              onMouseEnter={e => e.target.style.background = T.lilac}
+              onMouseLeave={e => e.target.style.background = T.violet}>
+                Send Message →
+              </button>
+            </form>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+Object.assign(window, { ExperiencePage, BlogPage, WorkPage, ContactPage });
+
+
+// ── TWEAKS PANEL + MAIN APP ──────────────────────────────────────────────────
+const { useState: useStateA, useEffect: useEffectA } = React;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accentColor": "#8b5cf6",
+  "video1_id": "dQw4w9WgXcQ",
+  "video1_title": "How the creator economy actually works in 2026",
+  "video1_channel": "@colinandsamir",
+  "video1_note": "Great take on platform shifts",
+  "video2_id": "LXb3EKWsInQ",
+  "video2_title": "Building brand communities from zero",
+  "video2_channel": "@garyvee",
+  "video2_note": "Still the blueprint",
+  "video3_id": "ZXsQAXx_ao0",
+  "video3_title": "The dark side of gaming influencer marketing",
+  "video3_channel": "@penguinz0",
+  "video3_note": "Important watch for anyone in this space"
+}/*EDITMODE-END*/;
+
+function TweaksPanel({ tweaks, setTweaks, visible, onClose }) {
+  const field = (key, label, placeholder) => (
+    <div style={{ marginBottom: 16 }}>
+      <label style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.12em',
+        textTransform: 'uppercase', color: 'rgba(245,240,255,0.5)', display: 'block', marginBottom: 6 }}>
+        {label}
+      </label>
+      <input value={tweaks[key] || ''} placeholder={placeholder}
+        onChange={e => {
+          const next = { ...tweaks, [key]: e.target.value };
+          setTweaks(next);
+          window.parent.postMessage({ type: '__edit_mode_set_keys', edits: next }, '*');
+          // Sync VIDEO_PICKS global
+          window.VIDEO_PICKS = [1,2,3].map(i => ({
+            id:      next[`video${i}_id`],
+            title:   next[`video${i}_title`],
+            channel: next[`video${i}_channel`],
+            note:    next[`video${i}_note`],
+          }));
+        }}
+        style={{
+          width: '100%', padding: '8px 12px', borderRadius: 8, boxSizing: 'border-box',
+          border: '1px solid rgba(139,92,246,0.25)', background: 'rgba(19,15,34,0.9)',
+          color: '#f5f0ff', fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.82rem',
+          outline: 'none',
+        }} />
+    </div>
+  );
+
+  if (!visible) return null;
+
+  return (
+    <div style={{
+      position: 'fixed', bottom: 24, right: 24, zIndex: 9999,
+      width: 320, maxHeight: '80vh', overflowY: 'auto',
+      background: 'rgba(9,7,15,0.97)', border: '1px solid rgba(139,92,246,0.3)',
+      borderRadius: 20, padding: 20,
+      backdropFilter: 'blur(20px)',
+      boxShadow: '0 20px 60px rgba(0,0,0,0.6)',
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
+        <div style={{ fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: '0.9rem',
+          letterSpacing: '0.05em', color: '#f5f0ff' }}>⚙ Tweaks</div>
+        <button onClick={onClose} style={{
+          background: 'none', border: 'none', color: 'rgba(245,240,255,0.5)',
+          cursor: 'pointer', fontSize: '1rem', lineHeight: 1,
+        }}>✕</button>
+      </div>
+
+      <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.15em',
+        textTransform: 'uppercase', color: T.violet, marginBottom: 12 }}>
+        ◆ Video Picks (paste YouTube IDs)
+      </div>
+
+      {[1,2,3].map(i => (
+        <div key={i} style={{
+          marginBottom: 20, padding: '14px', borderRadius: 12,
+          border: '1px solid rgba(139,92,246,0.15)', background: 'rgba(139,92,246,0.04)',
+        }}>
+          <div style={{ fontFamily: 'Syne,sans-serif', fontWeight: 700, fontSize: '0.7rem',
+            color: T.lilac, marginBottom: 12, letterSpacing: '0.08em' }}>
+            Video {i}
+          </div>
+          {field(`video${i}_id`,      'YouTube ID',  'e.g. dQw4w9WgXcQ')}
+          {field(`video${i}_title`,   'Title',       'Video title')}
+          {field(`video${i}_channel`, 'Channel',     '@channelname')}
+          {field(`video${i}_note`,    'Your note',   'Why you recommend it')}
+        </div>
+      ))}
+
+      <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.65rem', letterSpacing: '0.15em',
+        textTransform: 'uppercase', color: T.violet, margin: '16px 0 12px' }}>
+        ◆ Theme
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <label style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.7rem', color: 'rgba(245,240,255,0.5)' }}>
+          Accent Color
+        </label>
+        <input type="color" value={tweaks.accentColor || '#8b5cf6'}
+          onChange={e => {
+            const next = { ...tweaks, accentColor: e.target.value };
+            setTweaks(next);
+            window.parent.postMessage({ type: '__edit_mode_set_keys', edits: next }, '*');
+            // Update CSS variable live
+            document.documentElement.style.setProperty('--violet', e.target.value);
+          }}
+          style={{ width: 36, height: 28, borderRadius: 6, border: 'none', cursor: 'pointer',
+            background: 'none', padding: 0 }} />
+        <span style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.7rem', color: T.muted }}>
+          {tweaks.accentColor}
+        </span>
+      </div>
+
+      <div style={{ marginTop: 20, padding: '12px', borderRadius: 10,
+        background: 'rgba(250,204,21,0.06)', border: '1px solid rgba(250,204,21,0.2)' }}>
+        <div style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.7rem', color: '#facc15',
+          fontWeight: 700, marginBottom: 6 }}>💡 How to update videos</div>
+        <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.72rem',
+          color: 'rgba(245,240,255,0.55)', lineHeight: 1.6 }}>
+          1. Copy the YouTube video ID from the URL (e.g. youtube.com/watch?v=<b style={{color:'#fff'}}>THIS_PART</b>)<br />
+          2. Paste into "YouTube ID" above<br />
+          3. Changes save automatically
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [page, setPage] = useStateA('home');
+  const [tweaks, setTweaks] = useStateA(TWEAK_DEFAULTS);
+  const [showTweaks, setShowTweaks] = useStateA(false);
+
+  // Sync VIDEO_PICKS from tweaks on load
+  useEffectA(() => {
+    window.VIDEO_PICKS = [1,2,3].map(i => ({
+      id:      tweaks[`video${i}_id`],
+      title:   tweaks[`video${i}_title`],
+      channel: tweaks[`video${i}_channel`],
+      note:    tweaks[`video${i}_note`],
+    }));
+  }, []);
+
+  // Tweaks panel protocol
+  useEffectA(() => {
+    const handler = (e) => {
+      if (e.data?.type === '__activate_edit_mode')   setShowTweaks(true);
+      if (e.data?.type === '__deactivate_edit_mode') setShowTweaks(false);
+    };
+    window.addEventListener('message', handler);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', handler);
+  }, []);
+
+  const pageEl = {
+    home:       <HomePage setPage={setPage} />,
+    experience: <ExperiencePage />,
+    blog:       <BlogPage />,
+    work:       <WorkPage />,
+    contact:    <ContactPage />,
+  }[page] || <HomePage setPage={setPage} />;
+
+  return (
+    <div style={{ minHeight: '100vh', background: T.bg, color: T.text }}>
+      <Nav page={page} setPage={setPage} />
+      <main style={{ paddingTop: 64 }}>
+        {pageEl}
+      </main>
+      <Footer setPage={setPage} />
+      <TweaksPanel
+        tweaks={tweaks}
+        setTweaks={setTweaks}
+        visible={showTweaks}
+        onClose={() => {
+          setShowTweaks(false);
+          window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
+        }}
+      />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+  </script>
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+      <rect width="120" height="80" fill="#09070f"/>
+      <circle cx="60" cy="36" r="18" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <circle cx="60" cy="36" r="11" fill="#8b5cf6" opacity="0.9"/>
+      <rect x="24" y="60" width="72" height="3" rx="1.5" fill="#8b5cf6" opacity="0.3"/>
+    </svg>
+  </template>
+</body>
+</html>
