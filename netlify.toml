@@ -1,0 +1,4 @@
+# Static site — single-file React app (CDN React + in-browser Babel). No build step.
+[build]
+  publish = "."
+  command = ""
