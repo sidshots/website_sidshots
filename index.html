@@ -1268,8 +1268,10 @@ function HomePage({ setPage }) {
     <div>
       <Hero setPage={setPage} />
       <ExperienceTeaser setPage={setPage} />
+      <ToolsSection />
       <PartnersMarquee />
       <FeaturedWorkVideo />
+      <OwnedVideos />
       <MediaGallery />
       <LatestTweetSection />
       <HomeCTA setPage={setPage} />
@@ -1702,6 +1704,55 @@ function ToolCard({ tool }) {
         <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.8rem', color:T.muted, lineHeight:1.6, margin:0 }}>{tool.desc}</p>
       </div>
     </div>
+  );
+}
+
+// ── TOOLS SECTION (reused on Home) ────────────────────────────────────────────
+function ToolsSection() {
+  return (
+    <section style={{ padding:'80px clamp(16px,4vw,48px)', borderTop:`1px solid ${T.border}` }}>
+      <div style={{ marginBottom:40 }}>
+        <div style={{ fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+          fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:12 }}>◆ Tools I Built</div>
+        <h2 style={{ fontFamily:'Syne,sans-serif', fontWeight:800,
+          fontSize:'clamp(1.8rem,4vw,2.8rem)', letterSpacing:'-0.03em', margin:'0 0 8px' }}>A marketer who builds his own tools</h2>
+        <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.85rem', color:T.muted, maxWidth:540, lineHeight:1.6, margin:0 }}>
+          Internal products I designed and shipped to run growth at STAN — Supabase apps, automated dashboards, and AI agent workflows.
+        </p>
+      </div>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:20 }}>
+        {TOOLS.map((t,i) => <ToolCard key={i} tool={t} />)}
+      </div>
+    </section>
+  );
+}
+
+// ── OWNED VIDEOS (Home, below the work reel) ──────────────────────────────────
+function OwnedVideos() {
+  return (
+    <section style={{ padding:'80px clamp(16px,4vw,48px)', borderTop:`1px solid ${T.border}` }}>
+      <div style={{ marginBottom:32 }}>
+        <div style={{ fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+          fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:12 }}>◆ Owned Content</div>
+        <h2 style={{ fontFamily:'Syne,sans-serif', fontWeight:800,
+          fontSize:'clamp(1.8rem,4vw,2.8rem)', letterSpacing:'-0.03em', margin:'0 0 8px' }}>Reels &amp; films I made</h2>
+        <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.85rem', color:T.muted, maxWidth:520, lineHeight:1.6, margin:0 }}>
+          Short-form reels and long-form IP — written, produced and edited in-house.
+        </p>
+      </div>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:24, alignItems:'start' }}>
+        <div style={{ borderRadius:20, overflow:'hidden', border:`1px solid ${T.border}`, maxWidth:400, background:T.card }}>
+          <iframe src="https://www.instagram.com/p/DeRiv6JzjU2/embed" title="Instagram Reel"
+            allowFullScreen={true} scrolling="no" style={{ width:'100%', height:600, border:'none', display:'block' }} />
+        </div>
+        <div style={{ borderRadius:20, overflow:'hidden', border:`1px solid ${T.border}`, background:T.card, aspectRatio:'16/9' }}>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLnHJtPRQQ3Gam5Gw_DvJfi5hnMynLmYmb&rel=0&modestbranding=1"
+            title="Projects" allowFullScreen={true}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            style={{ width:'100%', height:'100%', border:'none', display:'block' }} />
+        </div>
+      </div>
+    </section>
   );
 }
 
