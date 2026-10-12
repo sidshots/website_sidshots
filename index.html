@@ -247,7 +247,7 @@ const { useState, useEffect, useRef } = React;
 function Nav({ page, setPage }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const links = ['home','experience','blog','work','contact'];
+  const links = ['home','experience','work','contact'];
   const labels = { home:'Home', experience:'Experience', blog:'Blog', work:'Work', contact:'Contact' };
 
   useEffect(() => {
@@ -1266,8 +1266,6 @@ function HomePage({ setPage }) {
   return (
     <div>
       <Hero setPage={setPage} />
-      <LatestSection setPage={setPage} />
-      <VideoPicksSection />
       <ExperienceTeaser setPage={setPage} />
       <PartnersMarquee />
       <FeaturedWorkVideo />
@@ -1529,6 +1527,17 @@ const WORK_ITEMS = [
     desc:'1M+ impressions, 20K+ followers in a short-cycle esports tournament campaign.', thumb:'https://picsum.photos/seed/wec21/800/500' },
 ];
 
+const TOOLS = [
+  { title:'STANSHOP Creator Affiliate Dashboard', img:'media/tool-creator-dashboard.png', stack:'Supabase · Postgres RLS · RPC · JS',
+    desc:"A full creator-affiliate product: tracked codes, a funnel-only Creator Score, and a server-side visibility matrix so creators can never derive STAN's margin. Built the creator app and the admin panel." },
+  { title:'STAN Command Center', img:'media/tool-command-center.png', stack:'Apps Script · Apify · IG Graph API · Sheets',
+    desc:'An automated social-analytics cockpit — nightly jobs auto-discover posts and refresh KPIs across Twitter and Instagram, rendered on a live dashboard. Built for zero cost.' },
+  { title:'AI Frames', img:'', stack:'Claude · n8n · Meta Ad Library · gen-video',
+    desc:'An AI pipeline from ad research to finished video: analyse the Meta Ad Library, generate scripts, and produce video — collapsing turnaround from days to hours.' },
+  { title:'Creator-Sourcing Engine', img:'', stack:'Apps Script · YouTube Data API · Sheets',
+    desc:'Discovers, enriches, scores and shortlists creators for any campaign. BGMI pilot: 197 creators to 26 candidates to 41 contacts.' },
+];
+
 function WorkPage() {
   return (
     <div>
@@ -1540,6 +1549,19 @@ function WorkPage() {
       <section style={{ padding: '60px clamp(16px,4vw,48px)' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 20 }}>
           {WORK_ITEMS.map(item => <WorkCard key={item.id} item={item} />)}
+        </div>
+        {/* Tools I Built */}
+        <div style={{ marginTop: 72 }}>
+          <div style={{ fontSize:'0.68rem', letterSpacing:'0.25em', color:T.violet,
+            fontFamily:'Syne,sans-serif', textTransform:'uppercase', marginBottom:12 }}>◆ Tools I Built</div>
+          <h2 style={{ fontFamily:'Syne,sans-serif', fontWeight:800,
+            fontSize:'clamp(1.6rem,3.5vw,2.4rem)', letterSpacing:'-0.03em', margin:'0 0 8px' }}>A marketer who builds his own tools</h2>
+          <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.85rem', color:T.muted, maxWidth:540, lineHeight:1.6, margin:'0 0 24px' }}>
+            Internal products I designed and shipped to run growth at STAN — Supabase apps, automated dashboards, and AI workflows.
+          </p>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:20 }}>
+            {TOOLS.map((t,i) => <ToolCard key={i} tool={t} />)}
+          </div>
         </div>
         {/* YouTube Playlist */}
         <div style={{ marginTop: 60 }}>
@@ -1654,6 +1676,24 @@ function WorkCard({ item }) {
           lineHeight: 1.3, marginBottom: 8, color: T.text }}>{item.title}</h3>
         <p style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.8rem',
           color: T.muted, lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+      </div>
+    </div>
+  );
+}
+
+function ToolCard({ tool }) {
+  const [err, setErr] = useStateP(false);
+  return (
+    <div style={{ borderRadius:18, overflow:'hidden', border:`1px solid ${T.border}`, background:T.card, display:'flex', flexDirection:'column' }}>
+      <div style={{ aspectRatio:'16/10', overflow:'hidden', background:`linear-gradient(135deg,${T.surface},${T.card})`, display:'flex', alignItems:'center', justifyContent:'center' }}>
+        {tool.img && !err
+          ? <img src={tool.img} alt={tool.title} onError={() => setErr(true)} style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top' }} />
+          : <div style={{ fontFamily:'Syne,sans-serif', fontWeight:800, fontSize:'1rem', color:T.violet, textAlign:'center', padding:'0 20px' }}>{tool.title}</div>}
+      </div>
+      <div style={{ padding:'18px 20px' }}>
+        <h3 style={{ fontFamily:'Syne,sans-serif', fontWeight:800, fontSize:'0.98rem', color:T.text, margin:'0 0 6px', lineHeight:1.3 }}>{tool.title}</h3>
+        <div style={{ fontFamily:'Syne,sans-serif', fontSize:'0.62rem', letterSpacing:'0.08em', textTransform:'uppercase', color:T.violet, marginBottom:10 }}>{tool.stack}</div>
+        <p style={{ fontFamily:'Plus Jakarta Sans,sans-serif', fontSize:'0.8rem', color:T.muted, lineHeight:1.6, margin:0 }}>{tool.desc}</p>
       </div>
     </div>
   );
