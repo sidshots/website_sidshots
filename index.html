@@ -954,7 +954,7 @@ function PartnerChip({ p }) {
   // Use local logo if available, else Google favicon
   const sources = p.logo
     ? [p.logo]
-    : p.domain ? [`https://www.google.com/s2/favicons?domain=${p.domain}&sz=64`] : [];
+    : p.domain ? [`https://unavatar.io/${p.domain}`, `https://www.google.com/s2/favicons?domain=${p.domain}&sz=128`] : [];
   const handleErr = () => setSrc(v => v + 1);
   const showImg = src < sources.length;
 
@@ -971,11 +971,12 @@ function PartnerChip({ p }) {
           src={sources[src]}
           alt={p.name}
           style={{
-            height: src === 0 ? 22 : 18,
-            maxWidth: 80,
+            height: 28,
+            maxWidth: 92,
             objectFit:'contain',
-            filter:'brightness(0) invert(1)',
-            opacity:0.85,
+            background:'#fff',
+            padding:'4px 7px',
+            borderRadius:6,
           }}
           onError={handleErr}
         />
@@ -1309,7 +1310,7 @@ function ExpCard({ exp, defaultOpen }) {
   const logoMeta = EXP_LOGOS[exp.company] || { color: exp.color };
   const sources = logoMeta.logo
     ? [logoMeta.logo]
-    : (logoMeta.domain ? [`https://www.google.com/s2/favicons?domain=${logoMeta.domain}&sz=64`] : []);
+    : (logoMeta.domain ? [`https://unavatar.io/${logoMeta.domain}`, `https://www.google.com/s2/favicons?domain=${logoMeta.domain}&sz=128`] : []);
   const showImg = logoSrc < sources.length;
 
   return (
